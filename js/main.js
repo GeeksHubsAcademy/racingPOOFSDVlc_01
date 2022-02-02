@@ -27,9 +27,11 @@ const cambiaPantalla = (cambio) => {
     //ver que tenga un display block, que la hará visible en el DOM (la web)
     document.getElementById(pantallaDeseada).style.display = "block";
 
+
     //Recorremos el array de las pantallas y a todas las que hay les damos la propiedad display como none
     for (let pantalla of arrayPantallas) {
         document.getElementById(pantalla).style.display = "none";
+        
     }
 
 
@@ -42,7 +44,7 @@ const selectCar = (nCoche) => {
         let cochePrimero = document.getElementById(nCoche);
         let datosCoche = document.getElementById("data"+ 1);
         //una vez he escogido el coche, invalido el img para que nadie haga onclick sobre él
-        cochePrimero.disabled = true;
+        cochePrimero.onclick = "";
         cochePrimero.classList.add("carSelected");
         datosCoche.innerHTML = `${team1.marca}`;
     
@@ -50,7 +52,7 @@ const selectCar = (nCoche) => {
     } else if (team2 == ""){
         team2 = allCars[nCoche];
         let cocheSegundo = document.getElementById(nCoche);
-        cocheSegundo.disabled = true;
+        cocheSegundo.onclick = "";
         cocheSegundo.classList.add("carSelected");
 
         console.log(team1,team2);
@@ -59,8 +61,19 @@ const selectCar = (nCoche) => {
 
         setTimeout(()=>{
             cambiaPantalla(3);
+            //game();
         },2500);
     }
-} 
+}
+
+let screen3 = document.getElementById("screen3");
+
+document.body.addEventListener("keydown", (ev)=>{
+            
+    if(screen3.style.display == "block"){
+        console.log("a almorzar");
+    }
+
+});
 
 //Algortimo

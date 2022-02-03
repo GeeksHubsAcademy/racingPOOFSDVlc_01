@@ -34,12 +34,30 @@
         </div>
     </section>
 
-    <section id="screen3" style="display:none" onclick="cambiaPantalla(4)">
-        <div class="designScreen3"></div>
+    <section id="screen3" style="display:none">
+        <div class="designScreen3">
+            <div class="upRaceScreen">
+                <div class="teamContainer">
+                    <div id="pictureCar1" class="carRacingDisplay"></div>
+                    <div id="stats1" class="statsDisplay"></div>
+                    <div id="meters1"></div>
+                </div>
+                <div class="teamContainer">
+                    <div id="pictureCar2" class="carRacingDisplay"></div>
+                    <div id="stats2" class="statsDisplay"></div>
+                    <div id="meters2"></div>
+                </div>
+            </div>
+            <div id="volanteContenedor" class="bottomRaceScreen" onclick="drive()">
+                <img class="volante" src="img/steering.jpg" alt="volante_freak"/>
+            </div>
+        </div>
     </section>
 
-    <section id="screen4" style="display:none" onclick="cambiaPantalla(1)">
-        <div class="designScreen4"></div>
+    <section id="screen4" style="display:none" onclick="cleanGame()">
+        <div class="designScreen4">
+            <div id="winner" class="ganador"></div>
+        </div>
     </section>
 
     <script src="js/racers.js"></script>

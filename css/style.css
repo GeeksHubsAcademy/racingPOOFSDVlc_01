@@ -27,10 +27,15 @@ body {
 }
 
 .designScreen3 {
-    background-color: black;
+    background-color: rgb(142, 223, 243);
 
     height: 100vh;
     width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .designScreen4 {
@@ -64,3 +69,48 @@ body {
 .dataCar {
     font-size: 3em;
 }
+
+.upRaceScreen {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carRacingDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statsDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: red;
+    font-size: 1.5em;
+}
+
+.foto {
+    width: 35em;
+    height: 20em;
+
+    margin: 4em;
+}
+
+.volante {
+    width: 4em;
+    height: 4em;
+}
+
+
